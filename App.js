@@ -1,46 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement(
-    "div",
-    {id: "parent"},
-    [
-        React.createElement(
-            "div",
-            {id: "child1"},
-            [React.createElement(
-                "h1",
-                {},
-                "I'm an H1 Tag"
-            ),
-            React.createElement(
-                "h2",
-                {},
-                "I'm an 2 Tag"
-            )
-            ]
-        ),
-        React.createElement(
-            "div",
-            {id: "child2"},
-            [React.createElement(
-                "h1",
-                {},
-                "I'm an H1 Tag"
-            ),
-            React.createElement(
-                "h2",
-                {},
-                "I'm an 2 Tag"
-            )
-            ]
-        )
-    ]
+const title = (
+    <h1 className="head" tabIndex={5}>
+        Namaste React using JSX
+    </h1>
 );
 
-// JSX - makes our life easy when we will create elements.
 
-console.log(parent);
+const HeadingComponent = () => {
+    <div id="container">
+        {title}
+            <h1 className="heading">Namaste React Functional Component</h1>
+    </div>
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<HeadingComponent/>);
