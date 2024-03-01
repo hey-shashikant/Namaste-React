@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const element = React.createElement(
-    "div",
-    {class:"title"},
-    React.createElement(
-        "h1",
-        {},
-        React.createElement("h2",{},React.createElement("h3",{},"Hello from react"))
-    )
-);
+const element = <div>
+    <h1>
+        <h2>
+            <h3>
+                Hello from React JSX!
+            </h3>
+        </h2>
+    </h1>
+</div>
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
