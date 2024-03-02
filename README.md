@@ -20,4 +20,25 @@
   - Tree Shaking - remove unused code
   - Different dev and prod bundles
 
+  # Food Ordering App 
+  # Twiggy
+
+  /*
+* Header
+    - Logo
+    - Nav Items
+    - 
+* Body
+    - Search
+    - Resturant Container
+        - Img
+        - Name of res, Star Rating, cusine, delivery time
+    - Resturant Card
+* Footer
+    - Copyright
+    - Links
+    - Address
+    - Contact
+*/
+
 
