@@ -83,3 +83,12 @@ Suppose the resturant-container has initially 7 cards and you clicked a button s
 So this diff algorithm tries to find out the difference between the old virtual DOM and new Virtual DOM and it will try to find out the differnce between the old virtual DOM and new virtual DOM in every render cycle.
 
 In React 16 new algorithm came to find out the diff which is known as React Fiber.
+
+# Monolithic vs Micro Services Architecture
+
+| `Monolithic` | `Microservices` | 
+|:--------:|:--------:|
+| `In this Architecture the entire application is build in a single individual unit. They are tightly coupled.` | `In the Micro Service Architecture we have different service for different jobs i.e. we are decomposing into services and seperating the concerns.` |
+
+
+
