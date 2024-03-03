@@ -59,3 +59,27 @@ import {Component} from "path"
 - UseState() - Superpowerful State variables in react
 - useEffect() - 
 
+Whenever a State Variables changes react re-renders the component.
+
+React Uses Reconcilication Algorithm(React Fiber)
+Like we had resturant-container which had 20 cards, Now my UI changes from filtering these 20 cards to 4 cards.
+Now why does it happen so fast, Firstly when you had 20 cards react creates a virtual DOM of it. Virtual DOM is not real DOM they are
+<div>
+    <div>
+    </div>
+</div>
+These are real DOM. Virtual DOM are instead a representation of Actual DOM. To be more specific React Element are objects, similarly when you have a 
+big structure it is all an object, so this object is basically react virtual DOM. This virtual DOM is nothing but react object.
+Actual DOM(real div)            Virtual DOM (not real div but these are JS objects.)
+<div>                           <div>
+    <div>                           <div>
+        <div>                           <div>
+        </div>                          </div>
+    </div>                          </div>
+</div>                          <div>
+
+# Diff Algorithm
+Suppose the resturant-container has initially 7 cards and you clicked a button so there are now 3 cards.
+So this diff algorithm tries to find out the difference between the old virtual DOM and new Virtual DOM and it will try to find out the differnce between the old virtual DOM and new virtual DOM in every render cycle.
+
+In React 16 new algorithm came to find out the diff which is known as React Fiber.
