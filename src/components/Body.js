@@ -1,5 +1,6 @@
 import RestaurantCard from "./ResturantCard";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
     // Local State Variable - Super powerful variable (Hook)
@@ -22,7 +23,7 @@ const Body = () => {
 
     // Normal JS Variable
     // let listOfResturants = resList;
-    return (
+    return listOfResturants.length === 0 ? <Shimmer/> : (
         <div className="body">
             <div className="filter">
                 <button className="filter-btn" onClick={ () => {
