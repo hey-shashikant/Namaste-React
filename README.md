@@ -90,5 +90,11 @@ In React 16 new algorithm came to find out the diff which is known as React Fibe
 |:--------:|:--------:|
 | `In this Architecture the entire application is build in a single individual unit. They are tightly coupled.` | `In the Micro Service Architecture we have different service for different jobs i.e. we are decomposing into services and seperating the concerns.` |
 
+How does Micro-Services Interact with each other?
+All these services are deployed on different ports and all these ports are mapped to the same domain name like for example
+- 1234 => UI        /
+- 1000 => Back-End  /api
+- 3000 => SMS       /sms
 
+useEffect is a react hooks which takes two arguement a arrow function and second arguement is a dependency array. It is called when the render cycle is over.
 

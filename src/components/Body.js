@@ -1,10 +1,23 @@
 import RestaurantCard from "./ResturantCard";
-import resList from "../utils/mockData";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Body = () => {
-    // Local State Variable - Super powerful variable
-    const [listOfResturants, setListOfResturant] = useState(resList);
+    // Local State Variable - Super powerful variable (Hook)
+    const [listOfResturants, setListOfResturant] = useState([]);
+    // useEffect is a react hooks which takes two arguement a arrow function and second arguement is a dependency array.
+    
+    useEffect( () => {
+        fetchData();
+    }, []);
+
+    const fetchData = async () => {
+        // this fetch super power is given to us by browser(JS enginer)
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9580044&lng=77.7089009&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+
+        const json = await data.json();
+
+        setListOfResturant(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+    };
    
 
     // Normal JS Variable
