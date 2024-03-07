@@ -100,4 +100,6 @@ All these services are deployed on different ports and all these ports are mappe
 - 3000 => SMS       /sms
 
 useEffect is a react hooks which takes two arguement a arrow function and second arguement is a dependency array. It is called when the render cycle is over.
+NOTE : when the render cycle finishes useEffect is called.
+NOTE: Whenver a state variable changes react re-renders the component.
 

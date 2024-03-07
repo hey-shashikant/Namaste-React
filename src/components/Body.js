@@ -5,6 +5,12 @@ import Shimmer from "./Shimmer";
 const Body = () => {
     // Local State Variable - Super powerful variable (Hook)
     const [listOfResturants, setListOfResturant] = useState([]);
+    
+    const [searchText, setSearchText] = useState("");
+
+    // whenever state variable update, react triggers a reconcilation cycle(re-renders the component).
+    console.log("Body Rendered");
+
     // useEffect is a react hooks which takes two arguement a arrow function and second arguement is a dependency array.
     
     useEffect( () => {
@@ -17,7 +23,8 @@ const Body = () => {
 
         const json = await data.json();
 
-        setListOfResturant(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+        // Optional Chaining
+        setListOfResturant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
    
 
@@ -26,6 +33,27 @@ const Body = () => {
     return listOfResturants.length === 0 ? <Shimmer/> : (
         <div className="body">
             <div className="filter">
+            <div className="search">
+                <input type="text" className="search-box" value={searchText} onChange={ (e) => {
+                    setSearchText(e.target.value);
+                }}/>
+                <button onClick={ () => {
+                    // Filter the resturant cards and update the UI
+                    // search Text
+                    console.log(searchText);
+
+                    const filteredList = listOfResturants.filter(res =>
+                        res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+
+                    // const filteredResturant = listOfResturants.filter( (res) => res.info.name.includes(searchText));
+                    
+                    console.log(filteredList);
+
+                    setListOfResturant(filteredList);
+
+
+                }}>Search</button>
+            </div>
                 <button className="filter-btn" onClick={ () => {
                     // filter logic here using Stata Hook.
                     
