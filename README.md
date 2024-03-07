@@ -91,7 +91,7 @@ In React 16 new algorithm came to find out the diff which is known as React Fibe
 | `Monolithic` | `Microservices` | 
 |:--------:|:--------:|
 | `In this Architecture the entire application is build in a single individual unit. They are tightly coupled.` | `In the Micro Service Architecture we have different service for different jobs i.e. we are decomposing into services and seperating the concerns.` |
-| ![Monolithic](https://drive.google.com/file/d/1tRfmQM-n7RHpLe5Cf2u3Mq_eDj2VGQbD/view?usp=sharing) | ![Monolithic](https://drive.google.com/file/d/1tRfmQM-n7RHpLe5Cf2u3Mq_eDj2VGQbD/view?usp=sharing) |
+| ![Monolithic](https://ibb.co/RvyGRHJ) | ![Monolithic](https://ibb.co/RvyGRHJ) |
 
 How does Micro-Services Interact with each other?
 All these services are deployed on different ports and all these ports are mapped to the same domain name like for example
